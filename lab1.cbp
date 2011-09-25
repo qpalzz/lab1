@@ -32,10 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="README" />
 		<Unit filename="main.cpp" />
 		<Unit filename="polinom.cpp" />
 		<Unit filename="polinom.h" />
-		<Unit filename="readme.txt" />
 		<Extensions>
 			<code_completion />
 			<debugger />

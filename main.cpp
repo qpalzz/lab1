@@ -4,7 +4,7 @@
 void readme()
 {
     ifstream in;
-    in.open("readme.txt");
+    in.open("README");
     string str;
     while (getline(in,str)) {
         cout << str << endl;
