@@ -19,6 +19,7 @@ class Polinom
         void output() const;
         void output(double x) const;
 
+        Polinom &operator =(const Polinom &);
         Polinom operator +(Polinom &);
         Polinom operator -(Polinom &);
         Polinom operator *(Polinom &);

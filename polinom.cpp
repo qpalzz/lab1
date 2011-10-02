@@ -7,7 +7,7 @@ Polinom::Polinom(int n)
     if (n > 0) {
         a = new double[n+1];
         for (int i = 0; i <= n; i++) {
-            a[i] = rand()%8-4;
+            a[i] = rand()%5+1;
         }
     }
 }
@@ -56,6 +56,19 @@ void Polinom::output(double x) const
     cout << "P(" << x << ") = " << calculate(x);
 }
 
+Polinom& Polinom::operator =(const Polinom &p)
+{
+    if (&p == this)
+        return *this;
+    delete []a;
+    n = p.n;
+    a = new double[n+1];
+    for (int i = 0; i <= n; i++) {
+        a[i] = p.a[i];
+    }
+    return *this;
+}
+
 Polinom Polinom::operator +(Polinom &p)
 {
     int N = max(this->n,p.n);
@@ -63,6 +76,7 @@ Polinom Polinom::operator +(Polinom &p)
     int i,j,r;
     for (i = this->n, j = p.n, r = N; i >= 0, j >= 0; i--, j--, r--) {
         A[r] = this->a[i] + p.a[j];
+        if (i < 0 || j < 0) break;
     }
     if (i >= 0) {
         for (int r = i; r >= 0; r--) {
@@ -84,6 +98,7 @@ Polinom Polinom::operator -(Polinom &p)
     int i,j,r;
     for (i = this->n, j = p.n, r = N; i >= 0, j >= 0; i--, j--, r--) {
         A[r] = this->a[i] - p.a[j];
+        if (i < 0 || j < 0) break;
     }
     if (i >= 0) {
         for (int r = i; r >= 0; r--) {

@@ -1,12 +1,13 @@
 # depslib dependency file v1.0
-1316949929 source:/home/developer/cpp/lab1/main.cpp
+1316954908 source:/home/developer/cpp/lab1/main.cpp
+	<fstream>
 	"polinom.h"
 
-1316949929 /home/developer/cpp/lab1/polinom.h
+1317559199 /home/developer/cpp/lab1/polinom.h
 	<iostream>
 	<math.h>
 	<stdlib.h>
 
-1316950617 source:/home/developer/cpp/lab1/polinom.cpp
+1317560129 source:/home/developer/cpp/lab1/polinom.cpp
 	"polinom.h"
 

@@ -33,29 +33,46 @@ int main()
 
     while (int pt = Menu()) {
         int n = 0;
-        cout << "Введите степень первого многочлена: ";
-        cin >> n;
-        Polinom a(n);
-        a.output();
-        cout << "Введите степень второго многочлена: ";
-        cin >> n;
-        Polinom b(n);
-        b.output();
-
         switch (pt) {
             case 1: {
+                cout << "Введите степень первого многочлена: ";
+                cin >> n;
+                Polinom a(n);
+                a.output();
+                cout << "Введите степень второго многочлена: ";
+                cin >> n;
+                Polinom b(n);
+                b.output();
                 Polinom c = a + b;
                 cout << "C = A + B :   ";
                 c.output();
                 break;
             }
             case 2: {
+                cout << "Введите степень первого многочлена: ";
+                cin >> n;
+                Polinom a(n);
+                a.output();
+                cout << "Введите степень второго многочлена: ";
+                cin >> n;
+                Polinom b(n);
+                b.output();
+
                 Polinom c = a - b;
                 cout << "C = A - B :   ";
                 c.output();
                 break;
             }
             case 3: {
+                cout << "Введите степень первого многочлена: ";
+                cin >> n;
+                Polinom a(n);
+                a.output();
+                cout << "Введите степень второго многочлена: ";
+                cin >> n;
+                Polinom b(n);
+                b.output();
+
                 Polinom c = a * b;
                 cout << "C = A * B :   ";
                 c.output();
